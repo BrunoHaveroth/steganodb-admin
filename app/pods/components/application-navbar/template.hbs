@@ -1,0 +1,26 @@
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="index.html">SteganoDb Admin</a>
+  </div>
+
+  <div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+      <ul class="nav" id="side-menu">
+        {{#each collections as |item|}}
+          <li {{action 'selectCollection' item}}>
+            <a>
+              <i class="fa fa-users" aria-hidden="true"></i>
+              <span>{{item}}</span>
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</nav>

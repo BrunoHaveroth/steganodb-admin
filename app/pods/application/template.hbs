@@ -1,0 +1,15 @@
+{{ember-notify messageStyle='bootstrap' closeAfter=5000}}
+<div id="wrapper">
+  {{application-navbar
+    collections=collections}}
+
+  <div id="page-wrapper">
+    {{modal-config
+      collections=collections
+      steganoDB=steganoDB
+      configs=configs
+      showModal=showModal}}
+
+      {{json-viewer collectionData=collectionData}}
+  </div>
+</div>

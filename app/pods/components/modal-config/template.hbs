@@ -1,0 +1,23 @@
+{{#if showModal}}
+  <div class="container-modal-config">
+    <div class="content-modal-config col-md-4">
+      <div class="form-group">
+        <label for="exampleInputEmail1">SELECIONE A PASTA DO BANCO DE DADOS:</label>
+        <p>
+          <button type="button" class="btn btn-info" {{action 'openDbPath'}}>SELECIONAR</button>
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">INSIRA O NOME DO BANCO</label>
+        {{input class="form-control" value=dbName placeholder="Insira a nome do banco"}}
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">INSIRA A CHAVE</label>
+        {{input class="form-control" value=dbKey placeholder="Insira a chave"}}
+      </div>
+      <div class="form-group text-right">
+        <button type="button" class="btn btn-success" {{action 'connect'}}>CONECTAR</button>
+      </div>
+    </div>
+  </div>
+{{/if}}
