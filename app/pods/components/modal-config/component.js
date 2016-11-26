@@ -39,7 +39,6 @@ export default Ember.Component.extend({
       this.getCollections(dbPath, dbName)
       .then((collections)=> {
         this.set('collections', collections);
-        dialog.showErrorBox('Error', JSON.stringify(collections));
 
         var SteganoDB = require('steganodb-js');
         var steganoDB = new SteganoDB(
